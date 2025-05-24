@@ -1,0 +1,42 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "cron-container",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-05-23",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"observability": {
+		"enabled": true
+	},
+	// Run every 2 minutes
+	"triggers": {
+    "crons": [
+      "*/2 * * * *",
+    ]
+  },
+	"containers": [
+		{
+			"class_name": "CronContainer",
+			"image": "./Dockerfile",
+			"max_instances": 1,
+			"name": "cron-container"
+		}
+	],
+	"durable_objects": {
+		"bindings": [
+			{
+				"class_name": "CronContainer",
+				"name": "CRON_CONTAINER"
+			}
+		]
+	},
+	"migrations": [
+		{
+			"new_sqlite_classes": [
+				"CronContainer"
+			],
+			"tag": "v1"
+		}
+	]
+}
