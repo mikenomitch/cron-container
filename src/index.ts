@@ -14,7 +14,11 @@ export class CronContainer extends Container {
 }
 
 export default {
-  async scheduled(_controller: any, env: any, _ctx: any) {
+  async fetch(): Promise<Response> {
+    return new Response("This Worker runs a cron job to execute a container on a schedule.");
+  },
+
+  async scheduled(_controller: any, env: { CRON_CONTAINER: DurableObjectNamespace<CronContainer> }) {
     let container = getContainer(env.CRON_CONTAINER);
     container.startContainer({
       envVars: {
