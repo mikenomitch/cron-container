@@ -20,7 +20,7 @@ export default {
 
   async scheduled(_controller: any, env: { CRON_CONTAINER: DurableObjectNamespace<CronContainer> }) {
     let container = getContainer(env.CRON_CONTAINER);
-    container.startContainer({
+    await container.startContainer({
       envVars: {
         LOCATION: "The Cloudflare San Francisco Office",
         LATITUDE: "37.780259",
