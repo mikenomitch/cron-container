@@ -1,8 +1,7 @@
-import { Container, getContainer } from 'cf-containers';
+import { Container, getContainer } from '@cloudflare/containers';
 
 export class CronContainer extends Container {
   sleepAfter = '10s';
-  manualStart = true;
 
   override onStart() {
     console.log('Starting container');
@@ -20,7 +19,7 @@ export default {
 
   async scheduled(_controller: any, env: { CRON_CONTAINER: DurableObjectNamespace<CronContainer> }) {
     let container = getContainer(env.CRON_CONTAINER);
-    await container.startContainer({
+    await container.start({
       envVars: {
         LOCATION: "The Cloudflare San Francisco Office",
         LATITUDE: "37.780259",

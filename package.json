@@ -12,24 +12,24 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250506.0",
 		"typescript": "^5.5.2",
-		"wrangler": "^4.14.4"
+		"wrangler": "^4.20.5"
 	},
 	"dependencies": {
-		"cf-containers": "0.0.8"
+		"@cloudflare/containers": "^0.0.10"
 	},
 	"cloudflare": {
-    "label": "Containers Cron",
-    "products": [
-      "Workers",
-      "Durable Objects",
+		"label": "Containers Cron",
+		"products": [
+			"Workers",
+			"Durable Objects",
 			"Containers"
-    ],
-    "categories": [
-      "containers"
-    ],
-    "icon_urls": [
-      "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/5ca0ca32-e897-4699-d4c1-6b680512f000/public"
-    ],
-    "preview_image_url": "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/fc7b4b62-442b-4769-641b-ad4422d74300/public"
-  }
+		],
+		"categories": [
+			"containers"
+		],
+		"icon_urls": [
+			"https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/5ca0ca32-e897-4699-d4c1-6b680512f000/public"
+		],
+		"preview_image_url": "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/fc7b4b62-442b-4769-641b-ad4422d74300/public"
+	}
 }
