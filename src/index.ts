@@ -4,11 +4,11 @@ export class CronContainer extends Container {
   sleepAfter = '10s';
 
   override onStart() {
-    console.log('Starting container');
+    console.log('starting container');
   }
 
   override onStop() {
-    console.log('Contianer Stopped');
+    console.log('container stopped');
   }
 }
 
