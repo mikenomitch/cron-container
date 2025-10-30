@@ -15,7 +15,7 @@
 		"wrangler": "^4.20.5"
 	},
 	"dependencies": {
-		"@cloudflare/containers": "^0.0.10"
+		"@cloudflare/containers": "^0.0.30"
 	},
 	"cloudflare": {
 		"label": "Containers Cron",
