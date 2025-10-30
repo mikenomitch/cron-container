@@ -2,7 +2,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "cron-container",
 	"main": "src/index.ts",
-	"compatibility_date": "2025-06-23",
+	"compatibility_date": "2025-10-29",
 	"compatibility_flags": [
 		"nodejs_compat"
 	],
@@ -20,7 +20,6 @@
 			"class_name": "CronContainer",
 			"image": "./Dockerfile",
 			"max_instances": 1,
-			"name": "cron-container",
 		}
 	],
 	"durable_objects": {

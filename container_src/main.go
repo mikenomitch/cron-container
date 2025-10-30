@@ -34,7 +34,7 @@ func main() {
 	}
 
 	// Build the API URL with current weather parameters
-	url := fmt.Sprintf("https://api.open-meteo.com/v1/forecast?latitude=%.6f&longitude=%.6f&current=temperature_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,weather_code,cloud_cover&timezone=auto",
+	url := fmt.Sprintf("http://api.open-meteo.com/v1/forecast?latitude=%.6f&longitude=%.6f&current=temperature_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,weather_code,cloud_cover&timezone=auto",
 		lat, lon)
 
 	// Make the HTTP request
